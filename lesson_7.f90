@@ -19,7 +19,7 @@ PROGRAM l7_c1
    INTEGER, PARAMETER :: max_size = 100       ! Maximum size of the array
    REAL, DIMENSION(2, max_size) :: x          ! Rank-2 array for data
 
-   REAL :: media1, media2                     ! Mean values for the two columns
+   REAL :: media1, media2, media3                     ! Mean values for the two columns
    REAL :: dev_std_1, dev_std_2               ! Standard deviation for the two columns
    REAL :: average                      ! Function to calculate the mean
 
@@ -59,6 +59,7 @@ PROGRAM l7_c1
       ! Calculate the means for both columns by calling the calcola_media function
       media1 = average(x(1,:), n)
       media2 = average(x(2,:), n)
+      media3 = average(x(2,:)+ x(1,:), n)
 
       ! Calculate the standard deviations for both columns by calling the calcola_varianza subroutine
       CALL calcola_varianza(x(1,:), media1, n, dev_std_1)
