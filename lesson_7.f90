@@ -12,7 +12,7 @@ PROGRAM l7_c1
    ! the argument list.
    !----------------------------------------------------------------------
    ! Variable declarations
-   IMPLICIT NONE                              ! No implicit variable declarations
+
    INTEGER :: ierror                          ! I/O status
    INTEGER :: icont                           ! Counter for data in the file
    INTEGER :: n                               ! Maximum number of data points
